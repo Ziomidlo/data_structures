@@ -4,11 +4,17 @@ class Stack:
     
     def push(self, x):
         self.data.append(x)
-        return x
+        return "added: " , x
     
     def pop(self):
-        x = self.data.pop()
-        return x
+        if(len(self.data) >= 1):
+            x = self.data.pop()
+            return "removed: " , x
+        else:
+            return "There's an empty list!"
 
     def peek(self):
-        return self.data[-1]
+        if(len(self.data) >= 1):
+            return self.data[-1]
+        else:
+            return "There's an empty list!"
