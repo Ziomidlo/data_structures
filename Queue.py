@@ -29,14 +29,11 @@ class Queue:
         else:
             return "queue is empty!"
         
-
-
     def swap(self):
         size = len(self.data)
         temp = self.data[1]
         self.data[1] = self.data[size - 1]
-        self.data[size - 1] = temp
-        
+        self.data[size - 1] = temp       
         return self.data
 
 

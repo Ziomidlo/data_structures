@@ -1,5 +1,6 @@
 from Stack import Stack
 from Queue import Queue
+from Max_heap import Max_heap
 
 '''stack = Stack()
 stack.push(10)
@@ -21,4 +22,13 @@ print(queue.swap())
 print(queue.get_queue())
 '''
 
-
+heap = Max_heap()
+heap.push(10)
+heap.push(23)
+heap.push(7)
+heap.push(1)
+heap.push(99)
+print(heap)
+print(heap.pop())
+print(heap)
+print(heap.peek())

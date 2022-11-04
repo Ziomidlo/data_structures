@@ -5,9 +5,11 @@ class Max_heap:
         self.heap = [0]
         for item in items:
             self.heap.append(item)
+            self.__bubble_up(len(self.heap) - 1)
     
     def push(self, data):
         self.heap.append(data)
+        self.__bubble_up(len(self.heap) - 1)
 
     def peek(self):
         if(self.heap[1]):
@@ -16,9 +18,18 @@ class Max_heap:
             return False
 
     def pop(self):
-        if(self.heap > 2):
-            self.__swap(max, len(self.heap) - 1)
-            max = self.heap.pop()
+        max = 1
+        last = len(self.heap) - 1
+        if len(self.heap) > 2:
+            self.__swap(max, last)
+            deleted = self.heap.pop()
+            self.__bubble_down(max)
+        elif(len(self.heap) == 2):
+            deleted = self.heap.pop()
+        else:
+            deleted = False
+        return deleted
+
     
     '''def __swap(self):
         size = len(self.heap)
@@ -41,6 +52,19 @@ class Max_heap:
         if largest != index:
             self.__swap(index,largest)
             self.__bubble_down(largest)
+
+    def __bubble_up(self, index):
+        parent = index // 2
+        if index <= 1:
+            return 
+        elif self.heap[parent] < self.heap[index]:
+            self.__swap(index, parent)
+            self.__bubble_up(parent)
+
+    def __str__(self):
+        return str(self.heap)
+
+
 
 
         
