@@ -1,6 +1,7 @@
 from Stack import Stack
 from Queue import Queue
 from Max_heap import Max_heap
+from Linked_list import Linked_list
 
 '''stack = Stack()
 stack.push(10)
@@ -22,7 +23,7 @@ print(queue.swap())
 print(queue.get_queue())
 '''
 
-heap = Max_heap()
+'''heap = Max_heap()
 heap.push(10)
 heap.push(23)
 heap.push(7)
@@ -31,4 +32,20 @@ heap.push(99)
 print(heap)
 print(heap.pop())
 print(heap)
-print(heap.peek())
+print(heap.peek())'''
+
+myList = Linked_list()
+myList.add(5)
+myList.add(7)
+myList.add(11)
+myList.add(6)
+myList.add(49)
+myList.print_list()
+
+print("size= " + str(myList.size))
+myList.remove(11)
+myList.print_list()
+print("size= " + str(myList.size))
+print (myList.find(5))
+print("root= " + str(myList.root))
+
