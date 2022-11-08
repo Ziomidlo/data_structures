@@ -2,6 +2,7 @@ from Stack import Stack
 from Queue import Queue
 from Max_heap import Max_heap
 from Linked_list import Linked_list
+from Circular_linked_list import Circular_linked_list
 
 '''stack = Stack()
 stack.push(10)
@@ -34,7 +35,7 @@ print(heap.pop())
 print(heap)
 print(heap.peek())'''
 
-myList = Linked_list()
+'''myList = Linked_list()
 myList.add(5)
 myList.add(7)
 myList.add(11)
@@ -47,5 +48,19 @@ myList.remove(11)
 myList.print_list()
 print("size= " + str(myList.size))
 print (myList.find(5))
-print("root= " + str(myList.root))
+print("root= " + str(myList.root))'''
+
+cll = Circular_linked_list()
+cll.add(5)
+cll.add(7)
+cll.add(11)
+cll.add(6)
+cll.add(49)
+cll.print_list()
+
+print("size= " + str(cll.size))
+cll.remove(11)
+print("size= " + str(cll.size))
+print(cll.find(5))
+print("root= " + str(cll.root))
 
