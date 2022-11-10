@@ -9,7 +9,7 @@ class Doubly_linked_list:
     
     def add(self, data):
         this_node = self.root
-        if this_node.data == 0:
+        if self.size == 0:
             new_node = Node(data)
             self.root = new_node
             self.last = self.root
@@ -49,6 +49,16 @@ class Doubly_linked_list:
             else:
                 this_node = this_node.next_node
         return False
+
+    def print_list(self):
+        if self.root is None:
+            return
+        this_node = self.root
+        print(this_node, end="->")
+        while this_node.next_node is not None:
+            this_node = this_node.next_node
+            print(this_node, end="->")
+        print()
 
 
     

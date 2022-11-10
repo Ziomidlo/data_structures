@@ -3,6 +3,7 @@ from Queue import Queue
 from Max_heap import Max_heap
 from Linked_list import Linked_list
 from Circular_linked_list import Circular_linked_list
+from Dobuly_linked_list import Doubly_linked_list
 
 '''stack = Stack()
 stack.push(10)
@@ -50,7 +51,7 @@ print("size= " + str(myList.size))
 print (myList.find(5))
 print("root= " + str(myList.root))'''
 
-cll = Circular_linked_list()
+'''cll = Circular_linked_list()
 cll.add(5)
 cll.add(7)
 cll.add(11)
@@ -62,5 +63,20 @@ print("size= " + str(cll.size))
 cll.remove(11)
 print("size= " + str(cll.size))
 print(cll.find(5))
-print("root= " + str(cll.root))
+print("root= " + str(cll.root))'''
 
+
+dll = Doubly_linked_list()
+dll.add(5)
+dll.add(7)
+dll.add(11)
+dll.add(6)
+dll.add(49)
+dll.print_list()
+
+print("size= " +  str(dll.size))
+dll.remove(11)
+dll.print_list()
+print("size= " + str(dll.size))
+print(dll.find(5))
+print(dll.last.prev_node)
