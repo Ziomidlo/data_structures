@@ -4,6 +4,7 @@ from Max_heap import Max_heap
 from Linked_list import Linked_list
 from Circular_linked_list import Circular_linked_list
 from Dobuly_linked_list import Doubly_linked_list
+from Tree import Tree
 
 '''stack = Stack()
 stack.push(10)
@@ -66,7 +67,7 @@ print(cll.find(5))
 print("root= " + str(cll.root))'''
 
 
-dll = Doubly_linked_list()
+'''dll = Doubly_linked_list()
 dll.add(5)
 dll.add(7)
 dll.add(11)
@@ -80,3 +81,4 @@ dll.print_list()
 print("size= " + str(dll.size))
 print(dll.find(5))
 print(dll.last.prev_node)
+'''
