@@ -82,3 +82,14 @@ print("size= " + str(dll.size))
 print(dll.find(5))
 print(dll.last.prev_node)
 '''
+
+tree = Tree(7)
+tree.insert(9)
+for i in [5, 12, 6, 4, 28, 50, 8, 11]:
+    tree.insert(i)
+print(tree.find(7))
+print(tree.find(99))
+print('\n', tree.get_size())
+tree.preorder_traversal()
+print()
+tree.inorder_traversal()

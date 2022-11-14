@@ -33,6 +33,38 @@ class Tree:
         else:
             return False
 
+    def get_size(self):
+        size = 1
+        if self.data is not None:
+            if self.left is not None:
+                size += 1
+                return self.left.get_size()
+            if self.right is not None:
+                size += 1
+                return self.right.get_size()
+        else:
+            return 1
+
+    def preorder_traversal(self):
+        if self is not None:
+            print(self.data, end= ' ')
+            if self.left is not None:
+                self.left.preorder_traversal()
+            if self.right is not None:
+                self.right.preorder_traversal()
+    
+    def inorder_traversal(self):
+        if self is not None:
+            if self.left is not None:
+                self.left.inorder_traversal()
+            print(self.data, end=' ')
+            if self.right is not None:
+                self.right.inorder_traversal()
+
+
+        
+
+
 
 
         
