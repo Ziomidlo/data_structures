@@ -5,6 +5,8 @@ from Linked_list import Linked_list
 from Circular_linked_list import Circular_linked_list
 from Dobuly_linked_list import Doubly_linked_list
 from Tree import Tree
+from Graph import Graph
+from Vertex import Vertex
 
 '''stack = Stack()
 stack.push(10)
@@ -83,7 +85,7 @@ print(dll.find(5))
 print(dll.last.prev_node)
 '''
 
-tree = Tree(7)
+'''tree = Tree(7)
 tree.insert(9)
 for i in [5, 12, 6, 4, 28, 50, 8, 11]:
     tree.insert(i)
@@ -95,3 +97,17 @@ print(tree.remove(7))
 #print()
 tree.inorder_traversal()
 print()
+'''
+
+g = Graph()
+a = Vertex('A')
+g.add_vertex(a)
+g.add_vertex(Vertex('B'))
+for i in range (ord('A'), ord('K')):
+    g.add_vertex(Vertex(chr(i)))
+
+edges = ['AB', 'AE', 'BF', 'CG', 'DE', 'DH', 'EH', 'FG', 'FI', 'FJ', 'GJ']
+for edge in edges:
+    g.add_edge(edge[0], edge[1])
+
+g.print_graph()
