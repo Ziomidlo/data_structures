@@ -7,6 +7,8 @@ from Dobuly_linked_list import Doubly_linked_list
 from Tree import Tree
 from Graph import Graph
 from Vertex import Vertex
+from Vertex_martrix import Vertex_martrix
+from Graph_matrix import Graph_matrix
 
 '''stack = Stack()
 stack.push(10)
@@ -99,12 +101,26 @@ tree.inorder_traversal()
 print()
 '''
 
-g = Graph()
+'''g = Graph()
 a = Vertex('A')
 g.add_vertex(a)
 g.add_vertex(Vertex('B'))
 for i in range (ord('A'), ord('K')):
     g.add_vertex(Vertex(chr(i)))
+
+edges = ['AB', 'AE', 'BF', 'CG', 'DE', 'DH', 'EH', 'FG', 'FI', 'FJ', 'GJ']
+for edge in edges:
+    g.add_edge(edge[0], edge[1])
+
+g.print_graph()'''
+
+
+g = Graph_matrix()
+a = Vertex_martrix('A')
+g.add_vertex(a)
+g.add_vertex(Vertex_martrix('B'))
+for i in range (ord('A'), ord('K')):
+    g.add_vertex(Vertex_martrix(chr(i)))
 
 edges = ['AB', 'AE', 'BF', 'CG', 'DE', 'DH', 'EH', 'FG', 'FI', 'FJ', 'GJ']
 for edge in edges:
